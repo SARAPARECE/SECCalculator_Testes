@@ -7,11 +7,22 @@ __doc__     = """This button creates the necessary documents for the calculator"
 import clr
 import Autodesk.Revit.DB as DB
 import sys
+import os
+diretorio_base = os.path.dirname(os.path.abspath(__file__))
+diretorio_base1 = os.path.dirname(os.path.abspath(diretorio_base))
+diretorio_base2 = os.path.dirname(os.path.abspath(diretorio_base1))
+diretorio_base3 = os.path.dirname(os.path.abspath(diretorio_base2))
+diretorio_base4 = os.path.dirname(os.path.abspath(diretorio_base3))
+diretorio_base5 = os.path.dirname(os.path.abspath(diretorio_base4))
+diretorio_base6 = os.path.dirname(os.path.abspath(diretorio_base5))
+diretorio_pacote = os.path.join(diretorio_base6, 'anaconda3', 'envs', 'PyRevit', 'Lib', 'site-packages')
+sys.path.append(diretorio_pacote)
+
 #sys.path.append(r'C:\Users\Asus\anaconda3\envs\PyRevit\Lib\site-packages')
 import pandas as pd
 import json
 import csv
-import os
+
 
 
 
@@ -94,19 +105,25 @@ for category in categories:
 
 
 
-## SEC-WBS
-SEC_WBS_file_path = os.path.join(os.path.dirname(__file__), "SEC_WBS.xlsx")
-#SEC_WBS_link = r"C:\Users\Asus\PycharmProjects\pythonProject\SECAPP.extension\SECC.tab\ByElement.panel\FileCreator.pushbutton\SEC_WBS.xlsx"
-SEC_WBS_table = pd.read_excel(SEC_WBS_file_path)
-SEC_WBS_json = SEC_WBS_table.to_json(orient='records', force_ascii=False).encode('utf8')
-SEC_WBS_data = json.loads(SEC_WBS_json)  # Extrat data from JSON
+####### SEC-WBS #######
+script_dir = os.path.dirname(__file__) # path do script a correr
+parentDirectory = os.path.dirname(script_dir) # path pai do script
+SEC_WBS_file_path = os.path.join(parentDirectory, 'FileCreator.pushbutton', 'SEC_WBS.csv') # path da pasta e nome do cdv a abrir
+with open(SEC_WBS_file_path, mode='r', encoding='utf-8-sig') as SEC_WBS:
+    SEC_WBS_table = csv.DictReader(SEC_WBS, delimiter=";")
+    SEC_WBS_data = list(SEC_WBS_table)
+#print(type(SEC_WBS_data))
+#print(SEC_WBS_data)
+#SEC_WBS_json = json.dumps(SEC_WBS_data, ensure_ascii=False).encode('utf8')
 
-# Tabela excel
-Co2Value_file_path = os.path.join(os.path.dirname(__file__), "Co2Value.xlsx")
-#Co2Value_link = r"C:\Users\Asus\PycharmProjects\pythonProject\SECAPP.extension\SECC.tab\ByElement.panel\FileCreator.pushbutton\Co2Value.xlsx"
-Co2Value_table = pd.read_excel(Co2Value_file_path)
-Co2Value_json = Co2Value_table.to_json(orient='records', force_ascii=False).encode('utf8')
-Co2Value_data = json.loads(Co2Value_json)  # Extrat data from JSON
+
+###### Tabela excel ######
+Co2Value_file_path = os.path.join(parentDirectory, 'FileCreator.pushbutton', 'Co2Value.csv')
+with open(Co2Value_file_path, mode='r', encoding='utf-8-sig') as SEC_WBS:
+    Co2Value_table = csv.DictReader(SEC_WBS, delimiter=";")
+    Co2Value_data = list(Co2Value_table)
+#Co2Value_json = Co2Value_table.to_json(orient='records', force_ascii=False).encode('utf8')
+#Co2Value_data = json.loads(Co2Value_json)  # Extrat data from JSON
 
 ## Create List CSV - Building Information ##
 csv_file_path1 = os.path.join(os.path.dirname(__file__), "Building_Information.csv")
@@ -129,26 +146,47 @@ for i in range(len(data)):
     if data[i]['SECClasS_Code'] is None:
         pass
     else:
-        if data[i]['SECClasS_Code'] in row['SECClasS_Code']:
-          data[i]['Quantity of elements'] = 0
-          data[i]['WBS_L1'] = row['WBS_L1']
-          data[i]['WBS_Title_L1'] = row['WBS_Title_L1']
-          data[i]['WBS_L2'] = row['WBS_L2']
-          data[i]['WBS_Title_L2'] = row['WBS_Title_L2']
-          data[i]['WBS_L3'] = row['WBS_L3']
-          data[i]['WBS_Title_L3'] = row['WBS_Title_L3']
-          data[i]['WBS_Code'] = row['WBS_Code']
-          data[i]['Expected_lifespan'] = row['Expected_lifespan']
-          data[i]['Mass'] = None
-          data[i]['Co2_Total'] = None
-          data[i]['BLC_Mass_Total'] = None
-          data[i]['BLC_Co2_Total'] = None
-          data[i]['Normalised requirement factor over building lifetime'] = None
-          data[i]['Measure'] = row['Measure']
-          data[i]['Conversion_Factor'] = row['Conversion Factor (Kg/m3, Kg/m2;kg/m;k/U)']
-          data[i]['Unit_Cost'] = row['Unit_Cost']
-          data[i]['Cost'] = None
-          data[i]['GWP_A1-A3'] = row['GWP A1-A3 (Kg/m3, Kg/m2;kg/m;k/U)']
+        if data[i]['SECClasS_Code'] == row['SECClasS_Code']:
+            data[i]['Quantity of elements'] = 0
+            data[i]['WBS_L1'] = row['WBS_L1']
+            data[i]['WBS_Title_L1'] = row['WBS_Title_L1']
+            data[i]['WBS_L2'] = row['WBS_L2']
+            data[i]['WBS_Title_L2'] = row['WBS_Title_L2']
+            data[i]['WBS_L3'] = row['WBS_L3']
+            data[i]['WBS_Title_L3'] = row['WBS_Title_L3']
+            data[i]['WBS_Code'] = row['WBS_Code']
+            data[i]['Expected_lifespan'] = row['Expected_lifespan']
+            data[i]['Mass'] = None
+            data[i]['Co2_Total'] = None
+            data[i]['BLC_Mass_Total'] = None
+            data[i]['BLC_Co2_Total'] = None
+            data[i]['Normalised requirement factor over building lifetime'] = None
+            data[i]['Measure'] = row['Measure']
+            data[i]['Conversion_Factor'] = row['Conversion Factor (Kg/m3, Kg/m2;kg/m;k/U)']
+            data[i]['Unit_Cost'] = row['Unit_Cost']
+            data[i]['Cost'] = None
+            data[i]['GWP_A1-A3'] = row['GWP A1-A3 (Kg/m3, Kg/m2;kg/m;k/U)']
+            data[i]['Concrete (%)'] = row['Concrete (%)']
+            data[i]['Bricks (%)'] = row['Bricks (%)']
+            data[i]['Tiles (%)'] = row['Tiles (%)']
+            data[i]['Ceramics (%)'] = row['Ceramics (%)']
+            data[i]['Wood (%)'] = row['Wood (%)']
+            data[i]['Glass (%)'] = row['Glass (%)']
+            data[i]['Plastic (%)'] = row['Plastic (%)']
+            data[i]['Bituminous mixtures (%)'] = row['Bituminous mixtures (%)']
+            data[i]['Copper/bronze/brass (%)'] = row['Copper/bronze/brass (%)']
+            data[i]['Aluminium (%)'] = row['Aluminium (%)']
+            data[i]['Iron/steel (%)'] = row['Iron/steel (%)']
+            data[i]['Other metal (%)'] = row['Other metal (%)']
+            data[i]['Soil and stones (%)'] = row['Soil and stones (%)']
+            data[i]['Dredging spoil (%)'] = row['Dredging spoil (%)']
+            data[i]['Track ballast (%)'] = row['Track ballast (%)']
+            data[i]['Insulation materials (%)'] = row['Insulation materials (%)']
+            data[i]['Asbestos containing materials (%)'] = row['Asbestos containing materials (%)']
+            data[i]['Gypsum-based materials (%)'] = row['Gypsum-based materials (%)']
+            data[i]['Electrical and Electronic Equipment (%)'] = row['Electrical and Electronic Equipment (%)']
+            data[i]['Cables (%)'] = row['Cables (%)']
+
 
 #3 Filtro Phase Created
 list_new = []
@@ -161,10 +199,9 @@ for row in data:
   else:
     list_new.append(row) # ver isto mais tarde
 data = list_new
-
 #3 Filtro só classificados
-list_classified= []
-list_notclassified= []
+list_classified = []
+list_notclassified = []
 for row in data:
   if row['SECClasS_Code'] is not None:
     list_classified.append(row)
@@ -209,6 +246,26 @@ for row in data:
             'Quantity of elements': row['Quantity of elements'],
             'Unit_Cost': row['Unit_Cost'],
             'GWP_A1-A3': row['GWP_A1-A3'],
+            'Concrete (%)': row['Concrete (%)'],
+            'Bricks (%)': row['Bricks (%)'],
+            'Tiles (%)': row['Tiles (%)'],
+            'Ceramics (%)': row['Ceramics (%)'],
+            'Wood (%)': row['Wood (%)'],
+            'Glass (%)': row['Glass (%)'],
+            'Plastic (%)': row['Plastic (%)'],
+            'Bituminous mixtures (%)': row['Bituminous mixtures (%)'],
+            'Copper/bronze/brass (%)': row['Copper/bronze/brass (%)'],
+            'Aluminium (%)': row['Aluminium (%)'],
+            'Iron/steel (%)': row['Iron/steel (%)'],
+            'Other metal (%)': row['Other metal (%)'],
+            'Soil and stones (%)': row['Soil and stones (%)'],
+            'Dredging spoil (%)': row['Dredging spoil (%)'],
+            'Track ballast (%)': row['Track ballast (%)'],
+            'Insulation materials (%)': row['Insulation materials (%)'],
+            'Asbestos containing materials (%)': row['Asbestos containing materials (%)'],
+            'Gypsum-based materials (%)': row['Gypsum-based materials (%)'],
+            'Electrical and Electronic Equipment (%)': row['Electrical and Electronic Equipment (%)'],
+            'Cables (%)': row['Cables (%)'],
         }
 
         # add to the appropriate dictionary and update seen_codes
@@ -291,19 +348,19 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
     for new_k, new_v in list_V.items():
       for keys, value in num_values_V.items():
         if new_v['SECClasS_Code'] is keys:
-          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "V", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"])
+          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "V", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], new_v['Concrete (%)'], new_v['Bricks (%)'], new_v['Ceramics (%)'], new_v['Wood (%)'], new_v['Glass (%)'], new_v['Plastic (%)'], new_v['Bituminous mixtures (%)'], new_v['Copper/bronze/brass (%)'], new_v['Aluminium (%)'], new_v['Iron/steel (%)'], new_v['Other metal (%)'], new_v['Soil and stones (%)'], new_v['Dredging spoil (%)'], new_v['Track ballast (%)'], new_v['Track ballast (%)'], new_v['Insulation materials (%)'], new_v['Asbestos containing materials (%)'], new_v['Gypsum-based materials (%)'], new_v['Electrical and Electronic Equipment (%)'], new_v['Cables (%)'], "0"])
     for new_k, new_v in list_A.items():
       for keys, value in num_values_A.items():
         if new_v['SECClasS_Code'] is keys:
-          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "A", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"])
+          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "A", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], new_v['Concrete (%)'], new_v['Bricks (%)'], new_v['Ceramics (%)'], new_v['Wood (%)'], new_v['Glass (%)'], new_v['Plastic (%)'], new_v['Bituminous mixtures (%)'], new_v['Copper/bronze/brass (%)'], new_v['Aluminium (%)'], new_v['Iron/steel (%)'], new_v['Other metal (%)'], new_v['Soil and stones (%)'], new_v['Dredging spoil (%)'], new_v['Track ballast (%)'], new_v['Track ballast (%)'], new_v['Insulation materials (%)'], new_v['Asbestos containing materials (%)'], new_v['Gypsum-based materials (%)'], new_v['Electrical and Electronic Equipment (%)'], new_v['Cables (%)'], "0"])
     for new_k, new_v in list_L.items():
       for keys, value in num_values_L.items():
         if new_v['SECClasS_Code'] is keys:
-          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "L", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"])
+          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "L", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], new_v['Concrete (%)'], new_v['Bricks (%)'], new_v['Ceramics (%)'], new_v['Wood (%)'], new_v['Glass (%)'], new_v['Plastic (%)'], new_v['Bituminous mixtures (%)'], new_v['Copper/bronze/brass (%)'], new_v['Aluminium (%)'], new_v['Iron/steel (%)'], new_v['Other metal (%)'], new_v['Soil and stones (%)'], new_v['Dredging spoil (%)'], new_v['Track ballast (%)'], new_v['Track ballast (%)'], new_v['Insulation materials (%)'], new_v['Asbestos containing materials (%)'], new_v['Gypsum-based materials (%)'], new_v['Electrical and Electronic Equipment (%)'], new_v['Cables (%)'], "0"])
     for new_k, new_v in list_U.items():
       for keys, value in num_values_U.items():
         if new_v['SECClasS_Code'] is keys:
-          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "U", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"])
+          CSV.writerow([new_k, new_v['SECClasS_Code'], new_v['SECClasS_Title'], new_v['Quantity of elements'], "U", new_v['Conversion_Factor'], new_v['GWP_A1-A3'], new_v['Unit_Cost'], new_v['Concrete (%)'], new_v['Bricks (%)'], new_v['Ceramics (%)'], new_v['Wood (%)'], new_v['Glass (%)'], new_v['Plastic (%)'], new_v['Bituminous mixtures (%)'], new_v['Copper/bronze/brass (%)'], new_v['Aluminium (%)'], new_v['Iron/steel (%)'], new_v['Other metal (%)'], new_v['Soil and stones (%)'], new_v['Dredging spoil (%)'], new_v['Track ballast (%)'], new_v['Track ballast (%)'], new_v['Insulation materials (%)'], new_v['Asbestos containing materials (%)'], new_v['Gypsum-based materials (%)'], new_v['Electrical and Electronic Equipment (%)'], new_v['Cables (%)'], "0"])
     CSV.writerow(add_line)
     csv_file.close()
 
@@ -325,5 +382,6 @@ print("The CSV files were created: Building_Information.csv and Building_Element
 print("The files will be stored in the FileCreator.pushbutton folder.")
 print("Both documents must be filled in with the correct information.")
 print(separator)
+
 
 

@@ -1,0 +1,902 @@
+﻿SECClasS_Code;SECClasS_Title;A1_A3;A1_A5;B1_B5 ;C1_C4;D;Conversion_factor;Unit_Cost
+Ma;Materiais;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20;Combinação de materiais orgânicos/inorgânicos - Combination inorganic/ organic materials;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_01;Argila - Adobe;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03;Agregados - Aggregates;0,01;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_02;Escória de aço arrefecida ao ar - Air-cooled steel slag;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_04;Agregados normais e pesados  - All-in normal and heavyweight aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_06;Agregados de barita - Barytes aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_07;Agregados para base, leito e enchimento - Base, bed and fill aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_07_03;Agregados para base, leito e enchimento - Base, bed and fill all-in aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_07_15;Agregados grosseiros para base, leito e enchimento - Base, bed and fill coarse aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_07_30;Agregados finos para base, leito e enchimento - Base, bed and fill fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_10;Blinding aggregates - Blinding aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_10_15;Blinding coarse aggregates - Blinding coarse aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_10_30;Blinding fine aggregates - Blinding fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_13;Clínquer - Clinker;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_15;Agregados grossos - Coarse aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_15_04;Agregados grossos de pedra - Armourstone coarse aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_15_34;Agregados gerais grossos - Coarse general aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_15_47;Agregados leves grossos para betão e argamassa - Coarse lightweight aggregates for concrete and mortar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_15_57;Agregados grossos normais e pesados - Coarse normal and heavyweight aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_19;Agregados de pedra britada - Crushed stone aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_19_56;Agregados de pedra natural - Natural stone aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_22;Agregados decorativos - Decorative aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_22_08;Agregados decorativos para pavimentos ligados - Bonded surfacing decorative aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_22_47;Agregados decorativos para pavimentos soltos - Loose surfacing decorative aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_28;Agregados expandidos - Expanded aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_28_15;Agregados leves de argila expandida - Expanded clay lightweight aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_28_34;Agregados de vidro expandido - Expanded glass aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_28_77;Agregados de escória expandida - Expanded slag aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_28_79;Agregados de ardósia expandida - Expanded slate aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_28_86;Granulado de espuma sintética - Synthetic foam granules;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30;Agregados finos - Fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_29;Agregados finos gerais - Fine general aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_30;Agregados finos leves para betão e argamassa - Fine lightweight aggregates for concrete and mortar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_31;Agregados finos normais e pesados - Fine normal and heavyweight aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_44;Agregados finos para juntas - Jointing fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_46;Agregados finos para camadas de pavimentação - Laying course fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_48;Finos de calcário - Limestone fines;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_30_86;Agregados finos para tratamento de superfícies - Surface treatment fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_35;Agregados granulares de cortiça - Granular cork aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_42;Agregados de minério de ferro - Iron ore aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_47;Agregados leves gerais - Lightweight general aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_54;Agregados de argamassa - Mortar aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_54_15;Agregados grossos de argamassa - Mortar coarse aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_54_30;Agregados finos de argamassa - Mortar fine aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_56;Pó de pedra natural - Natural stone dusts;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_56_51;Pó de mármore - Marble dust;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_59;Conchas de ostra - Oyster shells;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_63;Agregados de perlite - Perlite aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_64;Agregados para camadas de pavimento permeáveis - Permeable laying course aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_71;Agregados reciclados - Recycled aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_71_47;Agregados leves reciclados - Recycled lightweight aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_71_73;Granulado de borracha reciclada - Recycled rubber granules;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_77;Agregados de sucata de ferro - Scrap iron aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_80;Agregados de dimensão única - Single-sized aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_85;Agregados de tratamento de superfície - Surface dressing aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_03_94;Agregados de vermiculite - Vermiculite aggregates;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_13;Cerâmica - Ceramic;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_13_18;Coade stone - Coade stone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_13_26;Earthenware - Earthenware;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_13_27;Encaústica - Encaustic;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_13_65;Porcelana - Porcelain;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_13_88;Terracota - Terracotta;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16;Argilas - Clays;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_07;Argilas bentoníticas - Bentonite clays;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_07_12;Bentonite cálcica - Calcium bentonite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_07_66;Bentonite de potássio - Potassium bentonite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_07_83;Bentonite de sódio - Sodium bentonite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_30;Argila refratária - Fire clay;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_32;Caulino - Fuller's earth;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_35;Grog - Grog;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_45;Kaolin - Kaolin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_16_66;Pozolana - Pozzolana;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_18;Cob - Cob;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_18_98;Wychert - Wychert;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_21;Daub - Daub;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_64;Pisé - Pisé;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_81;Soil - Soil;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_81_16;Solo coeso - Cohesive soil;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_81_16_80; - Silt;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_81_35;Solo granular - Granular soil;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_20_81_35_35;Cascalho - Gravel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40;Materiais inorgânicos - Inorganic materials;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_04;Amianto - Asbestos;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_12;Carbono - Carbon;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_12_35;Grafite - Graphite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15;Cimento - Cement;0,83;0,00;0,00;0,00;0,00;3150,00;0,00
+Ma_40_15_01;Cimento acelerado - Accelerated cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_04;Cimento asfáltico - Asphalt cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_12;Cimento aluminoso - Calcium aluminate cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_28;Cimento expansivo - Expanding cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_33;Cimento reforçado com fibra de vidro - Glass-reinforced cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_34;Cimento em pó de granito - Granite-powder cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_35;Cimento de gesso - Gypsum cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_48;Cal - Lime;0,50;0,00;0,00;0,00;0,00;2300,00;0,00
+Ma_40_15_48_31;Cal formulada - Formulated lime;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_48_38;Cal hidratada - Hydrated lime;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_48_39;Cal hidráulica - Hydraulic lime;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_48_56;Cal hidráulica natural - Natural hydraulic lime;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_48_57;Cal não hidráulica - Non-hydraulic lime;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_50;Cimento de magnésia - Magnesia cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_52;Cimento para alvenaria - Masonry cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_56;Cimento natural - Natural cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_57;Cimento puro - Neat cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_59;Cimento oxiclorídrico - Oxychloric cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_65;Cimento impregnado de polímeros - Polymer-impregnated cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_66;Cimento Portland - Portland cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_66_85;Cimento Portland resistente a sulfatos - Sulfate-resisting Portland cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_67;Cimento pozolânico - Pozzolan cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_79;Cimento de escória - Slag cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_81;Cimento de solo - Soil cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_85;Cimento de enxofre - Sulfur cement;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_15_87;Tabby - Tabby;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16;Materiais de substituição do cimento - Cement replacement materials;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16_17;Sílica de fumo condensada - Condensed silica fume;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16_35;Escória granulada de alto-forno (GBS) - Granulated blast-furnace slag (GBS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16_35_35;Escória granulada de alto-forno moída (GGBS) - Ground granulated blast-furnace slag (GGBS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16_35_61;Escória de alto-forno granulada parcialmente moída (PGGBS) - Partially ground granulated blast-furnace slag (PGGBS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16_67;Cinzas de combustível pulverizadas - Pulverized fuel ash;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_16_67_80;Cinzas de combustível pulverizadas sinterizadas - Sintered pulverized fuel ash;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19;Betão - Concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_01;Betão com ar contido - Air-entrained concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_04;Betão asfáltico - Asphalt concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_14;Misturas granulares ligadas ao cimento - Cement-bound granular mixtures;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_16;Betão com cinzas - Cinder concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_22;Betão projectado - Designated concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_23;Betões projectados - Designed concretes;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_29;Betão fino de assentamento - Fine bedding concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_32;Betão com espuma - Foamed concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_36;Betão resistente ao calor - Heat-resistant concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_37;Betão de elevado desempenho - High-performance concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_37_92;Betão de ultra-alto desempenho - Ultra-high-performance concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_39;Misturas com ligantes hidráulicos para estradas - Hydraulic road binder bound mixtures;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_41;Betão in situ - In situ concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_42;Betão isolante - Insulating concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_42_47;Betão leve isolante - Lightweight insulating concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_47;Betão à base de cal - Lime concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_56;Betão sem finos - No-fines concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_57;Betão de classe normal - Normal-class concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_58;Betão de peso normal - Normal-weight concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_61;Betão impregnado de polímeros - Polymer-impregnated concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_63;Betão pós-tensionado - Post-tensioned concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_65;Betão pré-misturado - Pre-blended concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_66;Betão pré-fabricado - Precast concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_66_65;Betão pré-fabricado arquitectónico - Precast architectural concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_66_66;Betão estrutural pré-fabricado - Precast structural concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_66_67;Betão pré-fabricado estrutural pós-tensionado - Precast structural post-tensioned concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_67;Betão pré-esforçado - Prestressed concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_68;Betão pré-fabricado - Proprietary concrete;0,10;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_40_19_70;Betão pronto - Ready-mixed concrete;0,10;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_71;Betão armado - Reinforced concrete;0,24;0,00;0,00;0,00;0,00;2600,00;0,00
+Ma_40_19_71_28;Betão expansivo - Expansive concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_71_34;Betão reforçado com fibra de vidro - Glass fibre-reinforced concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_71_37;Betão de alta resistência - High-strength concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_71_66;Betão prescrito - Prescribed concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_71_84;Betão prescrito normalizado - Standardized prescribed concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_72;Betão de resina - Resin concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_73;Betão romano - Roman concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_74;Betão de escombros - Rubble concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_75;Betão auto-adensável - Self-compacting concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_76;Betão auto-adensável - Self-consolidating concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_78;Misturas ligadas a escórias - Slag bound mixtures;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_80;Betão de reparação de pequenas áreas - Small-area repair concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_82;Betão de classe especial - Special-class concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_82_82;Betão de prescrição especial - Special-class prescription concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_82_83;Betão de desempenho especial - Special-class performance concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_84;Betão projectado - Sprayed concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_84_84;Betão projetado por processo seco reforçado com aço - Steel-reinforced dry process sprayed concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_86;Betão resistente aos sulfatos - Sulfate-resistant concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_19_93;Betão subaquático - Underwater concrete;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33;Gases - Gases;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_03;Amoníaco - Ammonia;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_12;Dióxido de carbono (CO2) - Carbon dioxide (CO2);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_13;Monóxido de carbono (CO) - Carbon monoxide (CO);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_15;Cloro - Chlorine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_17;Ar comprimido - Compressed air;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_37;Hélio - Helium;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_39;Hidrogénio - Hydrogen;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_56;Azoto - Nitrogen;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_57;Óxido nitroso (N2O) - Nitrous oxide (N2O);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_58;Oxigénio - Oxygen;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_59;Ozono - Ozone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_33_71;Radão - Radon;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35;Vidro - Glass;1,44;0,00;0,00;0,00;0,00;2500,00;0,00
+Ma_40_35_04;Vidro de arquitectura - Architectural glass;1,44;0,00;0,00;0,00;0,00;2500,00;0,00
+Ma_40_35_04_30;Vidro figurado - Figured glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_04_82;Vidro de telha - Spandrel glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_04_85;Vidro estrutural - Structural glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_07;Vidro soprado - Blown glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_09;Vidro borossilicato - Borosilicate glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_17;Vidro colorido - Coloured glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_22;Vidro dicromático - Dichromatic glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_29;Fibra de vidro - Fibreglass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_31;Vidro flutuante - Float glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_33;Vidro anti-reflexo - Glare-reducing glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_34;Lã de vidro - Glass wool;2,33;0,00;0,00;0,00;0,00;50,00;0,00
+Ma_40_35_35;Vidro verde - Green glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_37;Vidro de absorção de calor - Heat-absorbing glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_38;Vidro resistente ao calor - Heat-resisting glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_39;Vidro resistente ao calor - Heat-strengthened glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_41;Vidro isolante - Insulating glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_46;Vidro de chumbo - Lead glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_46_19;Vidro de cristal - Crystal glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_46_30;Vidro de sílex - Flint glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_48;Vidro de cal - Lime glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_53;Vidro de mosaico - Mosaic glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_57;Vidro não reflector - Non-reflective glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_59;Vidro opalino - Opal glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_61;Vidro com padrão - Patterned glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_63;Vidro fotossensível - Photosensitive glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_65;Vidro de placa - Plate glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_67;Vidro prismático - Prismatic glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_71;Vidro reflector - Reflective glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_73;Vidro laminado - Rolled glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_75;Vidro de segurança - Safety glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_75_03;Vidro anti-bandido - Anti-bandit glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_75_10;Vidro resistente a balas - Bullet-resistant glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_75_97;Vidro com arame - Wired glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_78;Vidro de chapa - Sheet glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_35_99;Vidro de protecção contra raios X - X-ray protective glass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52;Metal - Metal;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_03;Alumínio - Aluminium;6,67;0,00;0,00;0,00;0,00;2700,00;0,00
+Ma_40_52_08;Latão - Brass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_09;Bronze - Bronze;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_18;Cobre - Copper;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_34;Ouro - Gold;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_42;Ferro - Iron;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_42_11;Ferro fundido - Cast iron;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_42_83;Ferro de grafite esferoidal - Spheroidal graphite iron;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_42_98;Ferro forjado - Wrought iron;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_47;Chumbo - Lead;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_79;Prata - Silver;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83;Aço - Steel;3,02;0,00;0,00;0,00;0,00;7700,00;0,00
+Ma_40_52_83_08;Aço blister - Blister steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_12;Aço carbono - Carbon steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_16;Aço cromado - Chrome steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_33;Aço galvanizado - Galvanized steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_36;Aço com alto teor de carbono - High-carbon steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_37;Aço de baixa liga de alta resistência - High-strength low-alloy steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_47;Aço com baixo teor de carbono - Low-carbon steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_51;Aço manganês - Manganese steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_52;Aço com médio teor de carbono - Medium-carbon steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_56;Aço ao níquel - Nickel steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_82;Aço inoxidável - Stainless steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_83;Liga de aço-alumínio - Steel-aluminium alloy;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_85;Aço estrutural - Structural steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_87;Aço revestido a terno - Terne-coated steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_89;Aço titânio - Titanium steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_83_96;Aço para intempéries - Weathering steel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_88;Estanho - Tin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_89;Titânio - Titanium;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_52_99;Zinco - Zinc;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84;Pedra - Stone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_41;Rochas ígneas - Igneous rocks;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_41_06;Basalto - Basalt;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_41_24;Dolerite - Dolerite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_41_34;Granito - Granite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_41_91;Tufo - Tuff;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_51;Rochas metamórficas - Metamorphic rocks;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_51_03;Antracite - Anthracite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_51_34;Gnaisse - Gneiss;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_51_51;Mármore - Marble;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_51_69;Quartzito - Quartzite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_51_80;Ardósia - Slate;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_53;Lã mineral - Mineral wool;1,29;0,00;0,00;0,00;0,00;100,00;0,00
+Ma_40_84_79;Rochas sedimentares - Sedimentary rocks;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_03;Alabastro - Alabaster;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_15;Quartzo - Chert;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_17;Carvão - Coal;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_24;Dolomite - Dolomite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_30;Granito - Flint;0,96;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_34;Gritstone - Gritstone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_47;Linhite - Lignite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_48;Calcário - Limestone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_51;Marga - Marl;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_76;Arenito - Sandstone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_80;Xisto - Shale;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_89;Travertino - Travertine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_84_79_91;Tufa - Tufa;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_86;Minerais sintéticos - Synthetic minerals;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_40_86_86;Carboneto de silício - Silicon carbide;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60;Materiais orgânicos - Organic materials;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_02;Material de origem animal - Animal-based material;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_02_09;Osso - Bone;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_02_47;Couro - Leather;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_02_80;Casca - Shell;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_02_98;Lã - Wool;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_08;Material betuminoso - Bituminous material;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_08_52;Material betuminoso modificado - Modified bituminous material;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_08_52_15;Alcatrão de hulha - Coal tar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_08_56;Material betuminoso natural - Natural bituminous material;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_08_56_04;Asfalto - Asphalt;50,09;0,00;0,00;0,00;0,00;2400,00;0,00
+Ma_60_08_56_05;Asfaltite - Asphaltite;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_08_56_08;Betume - Bitumen;0,19;0,00;0,00;0,00;0,00;1200,00;0,00
+Ma_60_08_56_73;Asfalto de pedra - Rock asphalt;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_15;Clorofluorocarbonetos - Chlorofluorocarbons;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_15_36;Halon - Halon;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_58;Petróleo - Oil;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_58_19;Petróleo bruto - Crude oil;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_58_64;Petróleo - Petroleum;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_58_64_47;Gás de petróleo liquefeito - Liquefied petroleum gas;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_58_64_64;Gasolina - Petrol;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_61;Papel - Paper;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64;Material de origem vegetal - Plant-based material;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_06;Bambu - Bamboo;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_18;Cortiça - Cork;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_35;Relva - Grass;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_62;Turfa - Peat;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_72;Caniço - Reed;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_76;Serragem - Sawdust;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_64_82;Palha - Straw;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65;Plástico - Plastics;3,31;0,00;0,00;0,00;0,00;910,00;0,00
+Ma_60_65_00;Acrilonitrilo-butadieno-estireno (ABS) - Acrylonitrile butadiene styrene (ABS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_01;Poliacrilonitrilo (PAN) - Polyacrylonitrile (PAN);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_03;Poliamida (PA) - Polyamide (PA);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_12;Policarbonato (PC) - Polycarbonate (PC);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_27;Poliéster - Polyester;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_27_28;Politereftalato de etileno (PET) - Polyethylene terephthalate (PET);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_28;Polietileno (PE) - Polyethylene (PE);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_28_37;Polietileno de alta densidade (HDPE) - High-density polyethylene (HDPE);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_28_48;Polietileno de baixa densidade (LDPE) - Low-density polyethylene (LDPE);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_28_51;Polietileno de média densidade (MDPE) - Medium-density polyethylene (MDPE);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_43;Poliisocianurato (PIR) - Polyisocyanurate (PIR);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_59;Polioxibenzilmetilenglicolanidrido - Polyoxybenzylmethylenglycolanhydride;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_67;Polipropileno (PP) - Polypropylene (PP);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_85;Poliestireno (PS) - Polystyrene (PS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_85_27;Poliestireno expandido (EPS) - Expanded polystyrene (EPS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_85_28;Espuma de poliestireno extrudido (XPS) - Extruded polystyrene foam (XPS);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_93;Poliuretano (PU) - Polyurethane (PU);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_94;Acetato de polivinilo (PVA) - Polyvinyl acetate (PVA);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_95;Fluoreto de polivinilideno (PVDF) - Polyvinylidene fluoride (PVDF);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_96;Policloreto de vinilo (PVC) - Polyvinyl chloride (PVC);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_96_15;Policloreto de vinilo clorado (CPVC) - Chlorinated polyvinyl chloride (CPVC);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_65_96_93;Policloreto de vinilo não plastificado (PVC-U) - Unplasticized polyvinyl chloride (PVC-U);0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72;Resina - Resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56;Resina natural - Natural resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_06;Resina de bálsamo - Balsam resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_08;Resina de benjoim - Benzoin resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_17;Resina de copal - Copal resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_21;Resina Damar - Damar resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_46;Resina de laca - Lacquer resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_51;Resina de mástique - Mastic resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_79;Resina de goma-laca - Shellac resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_56_91;Resina de terebintina - Turpentine resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86;Resina sintética - Synthetic resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_00;Resina acetal - Acetal resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_01;Resina acrílica - Acrylic resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_02;Resina de acrilonitrilo-butadieno-estireno - Acrylonitrile butadiene styrene resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_04;Resina alquídica - Alkyd resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_27;Resina epóxida - Epoxy resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_28;Resina de acetato de etileno vinilo - Ethylene vinyl acetate resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_46;Resina de polímero de cristais líquidos - Liquid crystal polymer resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_48;Resina plástica reforçada com fibras longas - Long fibre-reinforced plastics resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_52;Resina de melamina formaldeído - Melamine formaldehyde resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_60;Resina de fenol formaldeído - Phenol formaldehyde resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_61;Resina de poliamida - Polyamide resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_62;Resina de policarbonato - Polycarbonate resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_63;Resina de poliéster - Polyester resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_64;Resina de polietileno - Polyethylene resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_65;Resina de tereftalato de polietileno - Polyethylene terephthalate resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_66;Resina de sulfureto de polifenileno - Polyphenylene sulfide resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_67;Resina de polipropileno - Polypropylene resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_68;Resina de poliestireno - Polystyrene resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_69;Resina de poliuretano - Polyurethane resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_70;Resina de cloreto de polivinilo - Polyvinyl chloride resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_79;Resina de silicone - Silicone resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_89;Resina de elastómero termoplástico - Thermoplastic elastomer resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_92;Resina de poliéster insaturado - Unsaturated polyester resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_93;Resina de ureia-formaldeído - Urea formaldehyde resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_72_86_94;Resina de éster vinílico - Vinyl ester resin;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_74;Borracha - Rubber;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_81;Sabão - Soap;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97;Madeira - Wood;-1,03;0,00;0,00;0,00;0,00;600,00;0,00
+Ma_60_97_04;Freixo - Ash;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_07;Faia - Beech;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_08;Bétula - Birch;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_08_80;Bétula prateada - Silver birch;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_08_97;Bétula branca - White birch;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_13;Cedro - Cedar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_13_97;Cedro vermelho ocidental - Western red cedar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_26;Ébano - Ebony;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_27;Ulmeiro - Elm;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_27_25;Olmo holandês - Dutch elm;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_27_27;Olmo inglês - English elm;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_27_98;Olmo de Wych - Wych elm;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_30;Abeto - Fir;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_30_24;Abeto de Douglas - Douglas fir;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_37;Cicuta - Hemlock;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_37_97;Cicuta ocidental - Western hemlock;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_44;Jarrah - Jarrah;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_46;Lariço - Larch;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_46_28;Lariço europeu - European larch;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_46_44;Lariço japonês - Japanese larch;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_50;Mogno - Mahogany;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_51;Ácer - Maple;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_58;Carvalho - Oak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_58_03;Carvalho vermelho americano - American red oak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_58_04;Carvalho branco americano - American white oak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_58_27;Carvalho inglês - English oak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_58_28;Carvalho europeu - European oak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_58_32;Carvalho francês - French oak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63;Pinho - Pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_12;Pinheiro das Caraíbas - Caribbean pitch pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_48;Pinho das Caraíbas - Lodgepole pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_50;Pinheiro marítimo - Maritime pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_70;Pinho radiata - Radiata pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_77;Pinheiro silvestre - Scots pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_96;Pinheiro branco - White pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_63_99;Pinheiro amarelo - Yellow pine;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_66;Choupo - Poplar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_66_08;Choupo preto - Black poplar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_66_35;Choupo cinzento - Grey poplar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_66_97;Choupo branco - White poplar;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_81;Abeto - Spruce;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_81_57;Abeto da Noruega - Norway spruce;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_81_80;Abeto de Sitka - Sitka spruce;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_86;Plátano - Sycamore;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_88;Teca - Teak;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_96;Wallaba - Wallaba;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_97;Nogueira - Walnut;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_60_97_99;Teixo - Yew;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80;Materiais por forma - Materials by form;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_01;Aerogel - Aerogel;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_02;Aerossol - Aerosol;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_15;Colóide - Colloid;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_19;Cristal - Crystal;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_27;Emulsão - Emulsion;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_27_51;Microemulsão - Microemulsion;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_29;Fibra - Fibre;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_30;Filamento - Filament;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_30_52;Monofilamento - Monofilament;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_31;Film - Film;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_32;Espuma - Foam;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_33;Gás - Gas;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_35;Granulado - Granule;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_47;Líquido - Liquid;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_51;Membrana - Membrane;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_52;Malha - Mesh;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_56;Rede - Net;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_65;Pó - Powder;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_77;Folha - Sheet;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_80;Sólido - Solid;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Ma_80_81;Solução - Solution;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Pr;Produtos;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+Pr_20_96_71;Reforço estrutural e acessórios - Reinforcement and ancillaries;3,02;0,00;0,00;0,00;0,00;7800,00;0,00
+Pr_25_71_35;Placas e chapas de gesso - Gypsum boards and sheets;0,13;0,00;0,00;0,00;0,00;800,00;0,00
+Pr_35_31_64;Rebocos e estuques -Plasters and renders;0,20;0,00;0,00;0,00;0,00;2000,00;0,00
+Pr_20_93_52_15;Clay bricks - Tijolos de barro;0,21;0,00;0,00;0,00;0,00;1500,00;0,00
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;
+;;;;;;;;

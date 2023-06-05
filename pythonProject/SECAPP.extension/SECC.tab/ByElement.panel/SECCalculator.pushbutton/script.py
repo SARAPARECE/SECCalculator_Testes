@@ -6,10 +6,11 @@ import clr
 import Autodesk.Revit.DB as DB
 import sys
 #sys.path.append(r'C:\Users\Asus\anaconda3\envs\PyRevit\Lib\site-packages')
-import pandas as pd
+#import pandas as pd
 import json
 import csv
 import os.path
+from Autodesk.Revit.DB import Transaction
 
 clr.AddReference('RevitAPI')
 clr.AddReference('RevitAPIUI')
@@ -92,29 +93,35 @@ for category in categories:
 
 
 
-## SEC-WBS
+####### Tabela csv #### SEC-WBS #######
 script_dir = os.path.dirname(__file__) # path do script a correr
 parentDirectory = os.path.dirname(script_dir) # path pai do script
-SEC_WBS_file_path = os.path.join(parentDirectory, 'FileCreator.pushbutton', 'SEC_WBS.xlsx') # path da pasta e nome do cdv a abrir
-SEC_WBS_link = SEC_WBS_file_path
-SEC_WBS_table = pd.read_excel(SEC_WBS_link)
-SEC_WBS_json = SEC_WBS_table.to_json(orient='records', force_ascii=False).encode('utf8')
-SEC_WBS_data = json.loads(SEC_WBS_json)  # Extrat data from JSON
+SEC_WBS_file_path = os.path.join(parentDirectory, 'FileCreator.pushbutton', 'SEC_WBS.csv') # path da pasta e nome do cdv a abrir
+with open(SEC_WBS_file_path, mode='r', encoding='utf-8-sig') as SEC_WBS:
+    SEC_WBS_table = csv.DictReader(SEC_WBS, delimiter=";")
+    SEC_WBS_data = list(SEC_WBS_table)
+for i in range(len(SEC_WBS_data)):
+    for key in SEC_WBS_data[i]:
+        SEC_WBS_data[i][key] = SEC_WBS_data[i][key].replace(',', '.')
 
-# Tabela excel
-Co2Value_file_path = os.path.join(parentDirectory, 'FileCreator.pushbutton', 'Co2Value.xlsx')
-Co2Value_link = Co2Value_file_path
-Co2Value_table = pd.read_excel(Co2Value_link)
-Co2Value_json = Co2Value_table.to_json(orient='records', force_ascii=False).encode('utf8')
-Co2Value_data = json.loads(Co2Value_json)  # Extrat data from JSON
 
+###### Tabela csv #### Co2Value ######
+Co2Value_file_path = os.path.join(parentDirectory, 'FileCreator.pushbutton', 'Co2Value.csv')
+with open(Co2Value_file_path, mode='r', encoding='utf-8-sig') as SEC_WBS:
+    Co2Value_table = csv.DictReader(SEC_WBS, delimiter=";")
+    Co2Value_data = list(Co2Value_table)
+for i in range(len(Co2Value_data)):
+    for key in Co2Value_data[i]:
+        Co2Value_data[i][key] = Co2Value_data[i][key].replace(',', '.')
+
+#print(Co2Value_data)
 #2 MAPEAMENTO SECCLASS WBS E MEDIDAS
 for i in range(len(data)):
   for row in SEC_WBS_data:
     if data[i]['SECClasS_Code'] is None:
         pass
     else:
-        if data[i]['SECClasS_Code'] in row['SECClasS_Code']:
+        if data[i]['SECClasS_Code'] == row['SECClasS_Code']:
           data[i]['Quantity of elements'] = None
           data[i]['WBS_L1'] = row['WBS_L1']
           data[i]['WBS_Title_L1'] = row['WBS_Title_L1']
@@ -181,6 +188,7 @@ for row in data:
 #############
 
 
+
 # lê o documento da informação do utilizador
 script_dir = os.path.dirname(__file__) # path do script a correr
 parentDirectory = os.path.dirname(script_dir) # path pai do script
@@ -215,11 +223,13 @@ column_names = ["ref",
       "Electrical and Electronic Equipment (%)",
       "Cables (%)",
       "Total (must be 100%)"]
-EI = pd.read_csv(csv_file_path,
-                 sep=';',
-                 skiprows=1,
-                 names=column_names,
-                 encoding='utf-8')
+
+with open(csv_file_path, mode='r', encoding='utf-8-sig') as file:
+    reader = csv.DictReader(file, delimiter=';', fieldnames=column_names)
+    EI = list(reader)[1:]
+for i in range(len(EI)):
+    for key in EI[i]:
+        EI[i][key] = EI[i][key].replace(',', '.')
 
 
 ########################################
@@ -234,20 +244,24 @@ column_names2 = ["Project Number",
       "Building GFA (m2)*",
       "Building lifespan (years)*"]
 
-BI = pd.read_csv(csv_file_path1,
-                 sep=';',
-                 skiprows=1,
-                 names=column_names2,
-                 encoding='utf-8')
+with open(csv_file_path1, mode='r', encoding='utf-8-sig') as file:
+    reader = csv.DictReader(file, delimiter=';', fieldnames=column_names2)
+    BI = list(reader)[1]
+for key in BI:
+    BI[key] = BI[key].replace(',', '.')
 
 
+#print(BI)
+print("EI", EI)
 
 Project_Number = BI.get('Project Number')[0]
 Project_Name = BI.get('Project Name')[0]
 Building_Name = BI.get('Building Name')[0]
 Building_GFA = float(str(BI.get('Building GFA (m2)*')[0]).replace(',','.'))
 Building_lifespan = float(str(BI.get('Building lifespan (years)*')[0]).replace(',','.'))
-########################################
+####################################
+
+print("data", data)
 
 ###########  Cascata  ###########
 
@@ -255,13 +269,14 @@ for i in range(len(data)):
     mass = 0
     row = data[i]
     temp = []
-    for key in range(len(EI.index)):
-
-        if data[i]["SECClasS_Code"] == EI.get("SECClasS_Code")[key]:
-            data[i]["Conversion_Factor"] = float(EI.get("Conversion Factor (kg/m3, kg/m2, kg/m, kg/u)")[key])
-            data[i]["Quantity of elements"] = int(EI.get("Quantity of elements")[key])
+    for key in range(len(EI)):
+        if data[i]["SECClasS_Code"] == EI[key]["SECClasS_Code"]:
+            print(EI[key]["Conversion Factor (kg/m3, kg/m2, kg/m, kg/u)"])
+            data[i]["Conversion_Factor"] = float(EI[key]["Conversion Factor (kg/m3, kg/m2, kg/m, kg/u)"])
+            data[i]["Quantity of elements"] = int(EI[key]["Quantity of elements"])
         else:
             pass
+
     if 'Measure' in row:
         if row["Conversion_Factor"] is None:
             mass = 0
@@ -284,20 +299,22 @@ for i in range(len(data)):
                 cost = row["Unit_Cost"]
             else:
                 pass
+
     # Adicionar os valores ao MASS do data
     data[i]['Mass'] = mass
     data[i]['Cost'] = cost
+
 
 #print(data[0])
 #print(data[0]['Mass'])
 
 #Calculo das Massa por material e add no data
-for key in range(len(EI.index)):
+for key in range(len(EI)):
   #if "Concrete (%)" in list(EI):
     for lists in data:
       #print(EI.get("SECClasS_Code")[key])
-      if EI.get("SECClasS_Code")[key] == lists['SECClasS_Code']:
-        GWP = float(str(EI.get('GWP A1-A3 (kgCo2e/m3, kgCo2e/m2, kgCo2e/m, kgCo2e/u)')[key]).replace(',','.'))
+      if EI[key]["SECClasS_Code"] == lists['SECClasS_Code']:
+        GWP = float(str(EI[key]['GWP A1-A3 (kgCo2e/m3, kgCo2e/m2, kgCo2e/m, kgCo2e/u)']).replace(',','.'))
 
         if GWP > 0 or GWP is None:
           data[lists['id']]["GWP_A1-A3"] = GWP
@@ -305,71 +322,77 @@ for key in range(len(EI.index)):
             Mass = data[lists['id']]['Mass']
             if Mass is not None:
                 data[lists['id']].update({
-                    'Mass_Concrete': float(str(EI.get('Concrete (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Bricks': float(str(EI.get('Bricks (%)')[key]).replace(',', '.')) * Mass,
-                    'Mass_Tiles': float(str(EI.get('Tiles (%)')[key]).replace(',', '.')) * Mass,
-                    'Mass_Ceramics': float(str(EI.get('Ceramics (%)')[key]).replace(',', '.')) * Mass,
-                    'Mass_Wood': float(str(EI.get('Wood (%)')[key]).replace(',', '.')) * Mass,
-                    'Mass_Glass': float(str(EI.get('Glass (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Plastic': float(str(EI.get('Plastic (%)')[key]).replace(',','.')) * Mass * 0.01,
-                    'Mass_Bituminous_mixtures': float(str(EI.get('Bituminous mixtures (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Copper_bronze_brass': float(str(EI.get('Copper/bronze/brass (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Aluminium': float(str(EI.get('Aluminium (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Iron_steel': float(str(EI.get('Iron/steel (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Other_metal': float(str(EI.get('Other metal (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Soil_stones': float(str(EI.get('Soil and stones (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Dredging_spoil': float(str(EI.get('Dredging spoil (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Track_ballast': float(str(EI.get('Track ballast (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Insulation_materials': float(str(EI.get('Insulation materials (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Asbestos_containing_materials': float(str(EI.get('Asbestos containing materials (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Gypsum_based_materials': float(str(EI.get('Gypsum-based materials (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Electrical_electronic_equipment': float(str(EI.get('Electrical and Electronic Equipment (%)')[key]).replace(',','.')) * Mass,
-                    'Mass_Cables': float(str(EI.get('Cables (%)')[key]).replace(',','.')) * Mass,
-                    })
+                    'Mass_Concrete': float(str(EI[key]['Concrete (%)']).replace(',', '.')) * Mass,
+                    'Mass_Bricks': float(str(EI[key]['Bricks (%)']).replace(',', '.')) * Mass,
+                    'Mass_Tiles': float(str(EI[key]['Tiles (%)']).replace(',', '.')) * Mass,
+                    'Mass_Ceramics': float(str(EI[key]['Ceramics (%)']).replace(',', '.')) * Mass,
+                    'Mass_Wood': float(str(EI[key]['Wood (%)']).replace(',', '.')) * Mass,
+                    'Mass_Glass': float(str(EI[key]['Glass (%)']).replace(',', '.')) * Mass,
+                    'Mass_Plastic': float(str(EI[key]['Plastic (%)']).replace(',', '.')) * Mass,
+                    'Mass_Bituminous_mixtures': float(str(EI[key]['Bituminous mixtures (%)']).replace(',', '.')) * Mass,
+                    'Mass_Copper_bronze_brass': float(str(EI[key]['Copper/bronze/brass (%)']).replace(',', '.')) * Mass,
+                    'Mass_Aluminium': float(str(EI[key]['Aluminium (%)']).replace(',', '.')) * Mass,
+                    'Mass_Iron_steel': float(str(EI[key]['Iron/steel (%)']).replace(',', '.')) * Mass,
+                    'Mass_Other_metal': float(str(EI[key]['Other metal (%)']).replace(',', '.')) * Mass,
+                    'Mass_Soil_stones': float(str(EI[key]['Soil and stones (%)']).replace(',', '.')) * Mass,
+                    'Mass_Dredging_spoil': float(str(EI[key]['Dredging spoil (%)']).replace(',', '.')) * Mass,
+                    'Mass_Track_ballast': float(str(EI[key]['Track ballast (%)']).replace(',', '.')) * Mass,
+                    'Mass_Insulation_materials': float(
+                        str(EI[key]['Insulation materials (%)']).replace(',', '.')) * Mass,
+                    'Mass_Asbestos_containing_materials': float(
+                        str(EI[key]['Asbestos containing materials (%)']).replace(',', '.')) * Mass,
+                    'Mass_Gypsum_based_materials': float(
+                        str(EI[key]['Gypsum-based materials (%)']).replace(',', '.')) * Mass,
+                    'Mass_Electrical_electronic_equipment': float(
+                        str(EI[key]['Electrical and Electronic Equipment (%)']).replace(',', '.')) * Mass,
+                    'Mass_Cables': float(str(EI[key]['Cables (%)']).replace(',', '.')) * Mass,
+                })
             else:
                 pass
 
-
+print(data)
 # Calculo Co2
 for row in data:
-  if "Mass" in row and ( row["GWP_A1-A3"] is None or row["GWP_A1-A3"] == 0):
+  if "Mass" in row and (row["GWP_A1-A3"] is None or float(row["GWP_A1-A3"]) == 0):
       Co2_temp = {
-        'Co2_Concrete': Co2Value_data[0]['A1_A3'] * row['Mass_Concrete'],
-        'Co2_Bricks': Co2Value_data[1]['A1_A3'] * row['Mass_Bricks'],
-        'Co2_Tiles': Co2Value_data[2]['A1_A3'] * row['Mass_Tiles'],
-        'Co2_Ceramics': Co2Value_data[3]['A1_A3'] * row['Mass_Ceramics'],
-        'Co2_Wood': Co2Value_data[4]['A1_A3'] * row['Mass_Wood'],
-        'Co2_Glass': Co2Value_data[5]['A1_A3'] * row['Mass_Glass'],
-        'Co2_Plastic': Co2Value_data[6]['A1_A3'] * row['Mass_Plastic'],
-        'Co2_Bituminous_mixtures': Co2Value_data[7]['A1_A3'] * row['Mass_Bituminous_mixtures'],
-        'Co2_Copper_bronze_brass': Co2Value_data[8]['A1_A3'] * row['Mass_Copper_bronze_brass'],
-        'Co2_Aluminium': Co2Value_data[9]['A1_A3'] * row['Mass_Aluminium'],
-        'Co2_Iron_steel': Co2Value_data[10]['A1_A3'] * row['Mass_Iron_steel'],
-        'Co2_Other_metal': Co2Value_data[11]['A1_A3'] * row['Mass_Other_metal'],
-        'Co2_Soil_stones': Co2Value_data[12]['A1_A3'] * row['Mass_Soil_stones'],
-        'Co2_Dredging_spoil': Co2Value_data[13]['A1_A3'] * row['Mass_Dredging_spoil'],
-        'Co2_Track_ballast': Co2Value_data[14]['A1_A3'] * row['Mass_Track_ballast'],
-        'Co2_Insulation_materials': Co2Value_data[15]['A1_A3'] * row['Mass_Insulation_materials'],
-        'Co2_Asbestos_containing_materials': Co2Value_data[16]['A1_A3'] * row['Mass_Asbestos_containing_materials'],
-        'Co2_Gypsum_based_materials': Co2Value_data[17]['A1_A3'] * row['Mass_Gypsum_based_materials'],
-        'Co2_Electrical_electronic_equipment': Co2Value_data[18]['A1_A3'] * row['Mass_Electrical_electronic_equipment'],
-        'Co2_Cables': Co2Value_data[19]['A1_A3'] * row['Mass_Cables'],
-        }
+          'Co2_Concrete': float(Co2Value_data[0]['A1_A3']) * float(row['Mass_Concrete']),
+          'Co2_Bricks': float(Co2Value_data[1]['A1_A3']) * float(row['Mass_Bricks']),
+          'Co2_Tiles': float(Co2Value_data[2]['A1_A3']) * float(row['Mass_Tiles']),
+          'Co2_Ceramics': float(Co2Value_data[3]['A1_A3']) * float(row['Mass_Ceramics']),
+          'Co2_Wood': float(Co2Value_data[4]['A1_A3']) * float(row['Mass_Wood']),
+          'Co2_Glass': float(Co2Value_data[5]['A1_A3']) * float(row['Mass_Glass']),
+          'Co2_Plastic': float(Co2Value_data[6]['A1_A3']) * float(row['Mass_Plastic']),
+          'Co2_Bituminous_mixtures': float(Co2Value_data[7]['A1_A3']) * float(row['Mass_Bituminous_mixtures']),
+          'Co2_Copper_bronze_brass': float(Co2Value_data[8]['A1_A3']) * float(row['Mass_Copper_bronze_brass']),
+          'Co2_Aluminium': float(Co2Value_data[9]['A1_A3']) * float(row['Mass_Aluminium']),
+          'Co2_Iron_steel': float(Co2Value_data[10]['A1_A3']) * float(row['Mass_Iron_steel']),
+          'Co2_Other_metal': float(Co2Value_data[11]['A1_A3']) * float(row['Mass_Other_metal']),
+          'Co2_Soil_stones': float(Co2Value_data[12]['A1_A3']) * float(row['Mass_Soil_stones']),
+          'Co2_Dredging_spoil': float(Co2Value_data[13]['A1_A3']) * float(row['Mass_Dredging_spoil']),
+          'Co2_Track_ballast': float(Co2Value_data[14]['A1_A3']) * float(row['Mass_Track_ballast']),
+          'Co2_Insulation_materials': float(Co2Value_data[15]['A1_A3']) * float(row['Mass_Insulation_materials']),
+          'Co2_Asbestos_containing_materials': float(Co2Value_data[16]['A1_A3']) * float(
+              row['Mass_Asbestos_containing_materials']),
+          'Co2_Gypsum_based_materials': float(Co2Value_data[17]['A1_A3']) * float(row['Mass_Gypsum_based_materials']),
+          'Co2_Electrical_electronic_equipment': float(Co2Value_data[18]['A1_A3']) * float(
+              row['Mass_Electrical_electronic_equipment']),
+          'Co2_Cables': float(Co2Value_data[19]['A1_A3']) * float(row['Mass_Cables']),
+      }
       data[row['id']].update(Co2_temp)
-      list_Co2 = pd.DataFrame([Co2_temp])
-      list_Co2['Sum_Co2_perE'] = list_Co2.sum(axis=1)
-      data[row['id']]['Co2_Total'] = list_Co2['Sum_Co2_perE'].loc[0]
-      #print(row['id'], row['SECClasS_Code'], "Co2=", list_Co2['Sum_Co2_perE'].loc[0])
+      sum_Co2 = sum(Co2_temp.values())
+      data[row['id']]['Co2_Total'] = sum_Co2
+
+
     # Calculo Co2_GWP
-  elif row["GWP_A1-A3"] > 0:
+  elif float(row["GWP_A1-A3"]) > 0 or not None:
     if row["Measure"] == "V" and float(row["GWP_A1-A3"]) > 0:
       Co2_GWP = row['Volume'] * row["GWP_A1-A3"]
-    elif row["Measure"] == "A" and row["GWP_A1-A3"] > 0:
-      Co2_GWP = row['Area'] * row["GWP_A1-A3"]
-    elif row["Measure"] == "L" and row["GWP_A1-A3"] > 0:
-      Co2_GWP = row['Length'] * row["GWP_A1-A3"]
-    elif row["Measure"] == "U" and row["GWP_A1-A3"] > 0:
-      Co2_GWP = row["GWP_A1-A3"]
+    elif row["Measure"] == "A" and float(row["GWP_A1-A3"]) > 0:
+      Co2_GWP = row['Area'] * float(row["GWP_A1-A3"])
+    elif row["Measure"] == "L" and float(row["GWP_A1-A3"]) > 0:
+      Co2_GWP = row['Length'] * float(row["GWP_A1-A3"])
+    elif row["Measure"] == "U" and float(row["GWP_A1-A3"]) > 0:
+      Co2_GWP = float(row["GWP_A1-A3"])
     else:
       Co2_GWP = 0
     data[row['id']]['Co2_Total'] = Co2_GWP
@@ -377,9 +400,9 @@ for row in data:
 
 # LP * Expected_lifespan e add vari LP_factor * mass
 for row in data:
-  BLC = Building_lifespan / row['Expected_lifespan']
+  BLC = float(Building_lifespan) / float(row['Expected_lifespan'])
   data[row['id']]['Normalised requirement factor over building lifetime'] = BLC
-  data[row['id']]['BLC_Mass_Total'] = row['Mass'] * BLC
+  data[row['id']]['BLC_Mass_Total'] = float(row['Mass']) * float(BLC)
   if row["Co2_Total"] is not None:
     data[row['id']]['BLC_Co2_Total'] = row['Co2_Total'] * BLC
   if "Mass_Concrete" in row:
@@ -441,10 +464,10 @@ for row in data:
   TOTAL_CO2 = TOTAL_CO2 + row['Co2_Total']
   TOTAL_MASS_BLC = TOTAL_MASS_BLC + row['BLC_Mass_Total']
   TOTAL_CO2_BLC = TOTAL_CO2_BLC + row['BLC_Co2_Total']
-  TOTAL_COST = TOTAL_COST + row['Cost']
-  SOCIAL_COST = (TOTAL_CO2 / 1000) * 50
-Normalized_Co2 = (TOTAL_CO2 / (Building_GFA))
-Normalized_2 = ( Normalized_Co2 / Building_lifespan)
+  TOTAL_COST = float(TOTAL_COST)+ float(row['Cost'])
+  SOCIAL_COST = float((TOTAL_CO2 / 1000)) * 50
+Normalized_Co2 = float(TOTAL_CO2) / float(Building_GFA)
+Normalized_2 = (Normalized_Co2 / Building_lifespan)
 #########
 # Define a separator line
 separator = "_______________________________________________________________________________________________________________________________"
@@ -497,3 +520,29 @@ for item in data_json:
     csv_writer.writerow(item.values())
 
 data_csv.close()
+
+# Iniciando uma transação no Revit
+transaction = Transaction(doc, "Atualizar parâmetro GWP(kgCo2e)")
+transaction.Start()
+
+for category in categories:
+    elements = DB.FilteredElementCollector(doc).OfCategory(category).WhereElementIsNotElementType().ToElements()
+    for element in elements:
+        element_Id = element.Id.ToString()
+
+        # Procurando o valor de CO2 correspondente na lista de dados
+        data_item = next((item for item in data if item["ElementID"] == element_Id), None)
+
+        # Verificando se foi encontrado um valor de CO2 correspondente
+        if data_item is not None:
+            #print(data_item["Co2_Total"])
+            # Verificando se o parâmetro "GWP(kgCo2e)" existe no elemento
+            if element.LookupParameter("GWP(kgCo2e)"):
+                # Obtendo o parâmetro "GWP(kgCo2e)"
+                parameter = element.LookupParameter("GWP(kgCo2e)")
+                #print(type(parameter))
+                # Atualizando o valor do parâmetro "GWP(kgCo2e)" com o valor de CO2 correspondente
+                parameter.Set(data_item["Co2_Total"])
+
+    # Finalizando a transação
+transaction.Commit()

@@ -1,16 +1,20 @@
 #! python3
 # -*- coding: utf-8 -*-
-
+__title__   = "SECCalulator by material"
+__author__  = "Sara Parece"
+__doc__     = """This button this button will perform the calculations"""
 
 import clr
 import Autodesk.Revit.DB as DB
 from Autodesk.Revit.DB import Transaction
-import sys
+
+#import sys
 #sys.path.append(r'C:\Users\Asus\anaconda3\envs\PyRevit\Lib\site-packages')
-import pandas as pd
+#import pandas as pd
 import json
 import csv
 import os
+
 
 clr.AddReference('RevitAPI')
 clr.AddReference('RevitAPIUI')
@@ -95,22 +99,26 @@ for category in categories:
         data.append(Export_BIM_data)
 
 
-## SEC-WBS
+############ SEC-WBS ############
 script_dir = os.path.dirname(__file__) # path do script a correr
 parentDirectory = os.path.dirname(script_dir) # path pai do script
 parentDirectory2 = os.path.dirname(parentDirectory) # path pai do script
-SEC_WBS_file_path = os.path.join(parentDirectory2, 'ByElement.panel', 'FileCreator.pushbutton', 'SEC_WBS.xlsx') # path da pasta e nome do cdv a abrir
-SEC_WBS_link = SEC_WBS_file_path
-SEC_WBS_table = pd.read_excel(SEC_WBS_link)
-SEC_WBS_json = SEC_WBS_table.to_json(orient='records', force_ascii=False).encode('utf8')
-SEC_WBS_data = json.loads(SEC_WBS_json)  # Extrat data from JSON
+SEC_WBS_file_path = os.path.join(parentDirectory2, 'ByElement.panel', 'FileCreator.pushbutton', 'SEC_WBS.csv') # path da pasta e nome do cdv a abrir
+with open(SEC_WBS_file_path, mode='r', encoding='utf-8-sig') as SEC_WBS:
+    SEC_WBS_table = csv.DictReader(SEC_WBS, delimiter=";")
+    SEC_WBS_data = list(SEC_WBS_table)
+for i in range(len(SEC_WBS_data)):
+    for key in SEC_WBS_data[i]:
+        SEC_WBS_data[i][key] = SEC_WBS_data[i][key].replace(',', '.')
 
-# Tabela excel
-Co2Value_path = os.path.join(script_dir, 'Co2Value2.xlsx')
-Co2Value_link = Co2Value_path
-Co2Value_table = pd.read_excel(Co2Value_link)
-Co2Value_json = Co2Value_table.to_json(orient='records', force_ascii=False).encode('utf8')
-Co2Value_data = json.loads(Co2Value_json)  # Extrat data from JSON
+########## Tabela excel ###########
+Co2Value_path = os.path.join(script_dir, 'Co2Value2.csv')
+with open(Co2Value_path, mode='r', encoding='utf-8-sig') as SEC_WBS:
+    Co2Value_table = csv.DictReader(SEC_WBS, delimiter=";")
+    Co2Value_data = list(Co2Value_table)
+for i in range(len(Co2Value_data)):
+    for key in Co2Value_data[i]:
+        Co2Value_data[i][key] = Co2Value_data[i][key].replace(',', '.')
 
 #2 MAPEAMENTO SECCLASS WBS E MEDIDAS
 for i in range(len(data)):
@@ -118,26 +126,26 @@ for i in range(len(data)):
     if data[i]['SECClasS_Code'] is None:
         pass
     else:
-        if data[i]['SECClasS_Code'] in row['SECClasS_Code']:
-          data[i]['Quantity of elements'] = None
-          data[i]['WBS_L1'] = row['WBS_L1']
-          data[i]['WBS_Title_L1'] = row['WBS_Title_L1']
-          data[i]['WBS_L2'] = row['WBS_L2']
-          data[i]['WBS_Title_L2'] = row['WBS_Title_L2']
-          data[i]['WBS_L3'] = row['WBS_L3']
-          data[i]['WBS_Title_L3'] = row['WBS_Title_L3']
-          data[i]['WBS_Code'] = row['WBS_Code']
-          data[i]['Expected_lifespan'] = row['Expected_lifespan']
-          data[i]['Mass'] = None
-          data[i]['Co2_Total'] = None
-          data[i]['BLC_Mass_Total'] = None
-          data[i]['BLC_Co2_Total'] = None
-          data[i]['Normalised requirement factor over building lifetime'] = None
-          data[i]['Measure'] = row['Measure']
-          data[i]['Conversion_Factor'] = row['Conversion Factor (Kg/m3, Kg/m2;kg/m;k/U)']
-          data[i]['Unit_Cost'] = row['Unit_Cost']
-          data[i]['Cost'] = 0
-          data[i]['GWP_A1-A3'] = row['GWP A1-A3 (Kg/m3, Kg/m2;kg/m;k/U)']
+        if data[i]['SECClasS_Code'] == row['SECClasS_Code']:
+            data[i]['Quantity of elements'] = None
+            data[i]['WBS_L1'] = row['WBS_L1']
+            data[i]['WBS_Title_L1'] = row['WBS_Title_L1']
+            data[i]['WBS_L2'] = row['WBS_L2']
+            data[i]['WBS_Title_L2'] = row['WBS_Title_L2']
+            data[i]['WBS_L3'] = row['WBS_L3']
+            data[i]['WBS_Title_L3'] = row['WBS_Title_L3']
+            data[i]['WBS_Code'] = row['WBS_Code']
+            data[i]['Expected_lifespan'] = row['Expected_lifespan']
+            data[i]['Mass'] = None
+            data[i]['Co2_Total'] = None
+            data[i]['BLC_Mass_Total'] = None
+            data[i]['BLC_Co2_Total'] = None
+            data[i]['Normalised requirement factor over building lifetime'] = None
+            data[i]['Measure'] = row['Measure']
+            data[i]['Conversion_Factor'] = row['Conversion Factor (Kg/m3, Kg/m2;kg/m;k/U)']
+            data[i]['Unit_Cost'] = row['Unit_Cost']
+            data[i]['Cost'] = 0
+            data[i]['GWP_A1-A3'] = row['GWP A1-A3 (Kg/m3, Kg/m2;kg/m;k/U)']
 
 
 #3 Filtro Phase Created
@@ -317,8 +325,8 @@ for row in data:
             string = line['Name']
             nova_string = string[:-9]
             if string in row and (nova_string + " (Conversion_factor)") in row:
-                row[nova_string + " (Mass)"] = row[string] * row[nova_string + " (Conversion_factor)"]
-                row[nova_string + " (M_Co2)"] = row[nova_string + " (Mass)"] * row[nova_string + " (Co2)"]
+                row[nova_string + " (Mass)"] = float(row[string]) * float(row[nova_string + " (Conversion_factor)"])
+                row[nova_string + " (M_Co2)"] = float(row[nova_string + " (Mass)"]) * float(row[nova_string + " (Co2)"])
 
             else:
                 pass
@@ -336,7 +344,7 @@ for row in data:
         row["Co2_Total"] = total_co2
 ###########################
 #print(data)
-###########  Cascata  PAARA O COST ###########
+###########  Cascata  PARA O COST ###########
 
 for i in range(len(data)):
     mass = 0
@@ -364,17 +372,6 @@ for i in range(len(data)):
     # Adicionar os valores ao MASS do data
     data[i]['Cost'] = cost
 ####################
-#param_name = "GWP(KgCo2e)"
-#for i in range(len(data)):
-    #element_id = data[i]['ElementID']
-    #element = doc.GetElement(DB.ElementId(int(element_id)))
-    #parameter = element.LookupParameter(param_name)
-    #print(parameter)
-    #t = Transaction(doc, "test_api")
-    #t.Start()
-    #parameter.Set(round(data[i]["Co2_Total"], 2))
-    #print('feito')
-    #t.Commit()
 
 ########################################
 script_dir = os.path.dirname(__file__) # path do script a correr
@@ -384,10 +381,11 @@ CSV_file_path = os.path.join(parentDirectory2, 'ByElement.panel', 'FileCreator.p
 ## lê o documento da informação do utilizador
 column_names2 = ["Project Number",      "Project Name",      "Building Name",      "Building GFA (m2)*",      "Building lifespan (years)*"]
 
-BI = pd.read_csv(CSV_file_path,
-                 sep=';',
-                 skiprows=1,
-                 names=column_names2)
+with open(CSV_file_path, mode='r', encoding='utf-8-sig') as file:
+    reader = csv.DictReader(file, delimiter=';', fieldnames=column_names2)
+    BI = list(reader)[1]
+for key in BI:
+    BI[key] = BI[key].replace(',', '.')
 
 Project_Number = BI.get('Project Number')[0]
 Project_Name = BI.get('Project Name')[0]
@@ -404,7 +402,7 @@ for row in data:
     row['Normalised requirement factor over building lifetime'] = BLC
     row['BLC_Mass_Total'] = row['Mass'] * BLC
     if row["Co2_Total"] is not None:
-        row['BLC_Co2_Total'] = row['Co2_Total'] * BLC
+        row['BLC_Co2_Total'] = float(row['Co2_Total']) * float(BLC)
     #print(row['Mass'])
 
 ########################################
@@ -417,11 +415,12 @@ TOTAL_CO2_BLC = 0
 TOTAL_COST = 0
 for row in data:
   TOTAL_MASS = TOTAL_MASS + row['Mass']
-  TOTAL_CO2 = TOTAL_CO2 + row['Co2_Total']
-  TOTAL_MASS_BLC = TOTAL_MASS_BLC + row['BLC_Mass_Total']
-  TOTAL_CO2_BLC = TOTAL_CO2_BLC + row['BLC_Co2_Total']
+  TOTAL_CO2 = float(TOTAL_CO2) + float(row['Co2_Total'])
+  TOTAL_MASS_BLC = float(TOTAL_MASS_BLC) + float(row['BLC_Mass_Total'])
+  TOTAL_CO2_BLC = float(TOTAL_CO2_BLC) + float(row['BLC_Co2_Total'])
   SOCIAL_COST = (TOTAL_CO2 / 1000) * 50
-  TOTAL_COST = TOTAL_COST + row['Cost']
+  TOTAL_COST = float(TOTAL_COST) + float(row['Cost'])
+
 Normalized_Co2 = (TOTAL_CO2 / (Building_GFA))
 Normalized_2 = ( Normalized_Co2 / Building_lifespan)
 
@@ -442,7 +441,7 @@ print("Normalized GWP = {:.2f} kgCo2e/m2".format(Normalized_Co2), end=" ")
 print("Social Cost of Carbon = {:.2f} €".format(SOCIAL_COST), end=" ")
 print("Mass Global considering Building Life Cycle  = {:.2f} kg".format(TOTAL_MASS_BLC), end=" ")
 print("Co2 Global considering Building Life Cycle = {:.2f} kgCo2e".format(TOTAL_CO2_BLC))
-print("Budget Estimate = {:.2f} €".format(TOTAL_COST))
+#print("Budget Estimate = {:.2f} €".format(TOTAL_COST))
 print(separator)
 
 print("The CSV and json files were created in the ../ByMaterial.panel/SECCalculator.pushbutton/SECCalculator.pushbutton: "
@@ -478,3 +477,29 @@ for item in data_json:
     csv_writer.writerow(item.values())
 
 data_csv.close()
+
+# Iniciando uma transação no Revit
+transaction = Transaction(doc, "Atualizar parâmetro GWP(kgCo2e)")
+transaction.Start()
+
+for category in categories:
+    elements = DB.FilteredElementCollector(doc).OfCategory(category).WhereElementIsNotElementType().ToElements()
+    for element in elements:
+        element_Id = element.Id.ToString()
+
+        # Procurando o valor de CO2 correspondente na lista de dados
+        data_item = next((item for item in data if item["ElementID"] == element_Id), None)
+
+        # Verificando se foi encontrado um valor de CO2 correspondente
+        if data_item is not None:
+            #print(data_item["Co2_Total"])
+            # Verificando se o parâmetro "GWP(kgCo2e)" existe no elemento
+            if element.LookupParameter("GWP(kgCo2e)"):
+                # Obtendo o parâmetro "GWP(kgCo2e)"
+                parameter = element.LookupParameter("GWP(kgCo2e)")
+                #print(type(parameter))
+                # Atualizando o valor do parâmetro "GWP(kgCo2e)" com o valor de CO2 correspondente
+                parameter.Set(data_item["Co2_Total"])
+
+    # Finalizando a transação
+transaction.Commit()
