@@ -252,7 +252,7 @@ for key in BI:
 
 
 #print(BI)
-print("EI", EI)
+#print("EI", EI)
 
 Project_Number = BI.get('Project Number')[0]
 Project_Name = BI.get('Project Name')[0]
@@ -261,7 +261,7 @@ Building_GFA = float(str(BI.get('Building GFA (m2)*')[0]).replace(',','.'))
 Building_lifespan = float(str(BI.get('Building lifespan (years)*')[0]).replace(',','.'))
 ####################################
 
-print("data", data)
+#print("data", data)
 
 ###########  Cascata  ###########
 
@@ -271,7 +271,7 @@ for i in range(len(data)):
     temp = []
     for key in range(len(EI)):
         if data[i]["SECClasS_Code"] == EI[key]["SECClasS_Code"]:
-            print(EI[key]["Conversion Factor (kg/m3, kg/m2, kg/m, kg/u)"])
+            #print(EI[key]["Conversion Factor (kg/m3, kg/m2, kg/m, kg/u)"])
             data[i]["Conversion_Factor"] = float(EI[key]["Conversion Factor (kg/m3, kg/m2, kg/m, kg/u)"])
             data[i]["Quantity of elements"] = int(EI[key]["Quantity of elements"])
         else:
@@ -350,7 +350,6 @@ for key in range(len(EI)):
             else:
                 pass
 
-print(data)
 # Calculo Co2
 for row in data:
   if "Mass" in row and (row["GWP_A1-A3"] is None or float(row["GWP_A1-A3"]) == 0):

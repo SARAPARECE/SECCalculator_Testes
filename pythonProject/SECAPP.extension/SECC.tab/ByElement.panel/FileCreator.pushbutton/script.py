@@ -18,9 +18,6 @@ diretorio_base6 = os.path.dirname(os.path.abspath(diretorio_base5))
 diretorio_pacote = os.path.join(diretorio_base6, 'anaconda3', 'envs', 'PyRevit', 'Lib', 'site-packages')
 sys.path.append(diretorio_pacote)
 
-#sys.path.append(r'C:\Users\Asus\anaconda3\envs\PyRevit\Lib\site-packages')
-import pandas as pd
-import json
 import csv
 
 
